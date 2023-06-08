@@ -241,11 +241,12 @@ impl Settings {
     }
 
     fn needs_update_check(&self) -> Result<bool> {
-        let last_check = Settings::last_version_check()?;
-        let diff = Utc::now() - last_check;
+        //let last_check = Settings::last_version_check()?;
+        //let diff = Utc::now() - last_check;
 
         // Check a max of once per hour
-        Ok(diff.num_hours() >= 1)
+        //Ok(diff.num_hours() >= 1)
+        Ok(false)
     }
 
     async fn latest_version(&self) -> Result<Version> {
